@@ -1,0 +1,658 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tourney:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: #1c1d25;
+  color: white;
+  height: 60px;
+}
+.navBar p {
+  margin-left: 15rem;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 5px;
+  color: #f98f36;
+}
+
+.navBar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0.5;
+  margin-right: 15rem;
+}
+.navBar ul li {
+  list-style: none;
+  font-size: 18px;
+  font-family: "Titillium Web", sans-serif;
+  cursor: pointer;
+}
+.navBar ul li:hover {
+  color: rgb(77, 144, 245);
+}
+.homePage {
+  position: relative;
+  background: #1c1d25;
+  color: white;
+  width: 100%;
+  height: 100vh;
+}
+.homePage h1 {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  font-size: 70px;
+  font-family: "Lato", sans-serif;
+}
+.homePage h2 {
+  position: absolute;
+  top: 43%;
+  left: 30%;
+  font-size: 45px;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+.homePage button {
+  position: absolute;
+  top: 60%;
+  left: 42%;
+  padding: 7px 30px;
+  font-size: 30px;
+  background: #f98f36;
+  border: 1.5px solid #f98f36;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+}
+.fa-chevron-down {
+  position: absolute;
+  top: 80%;
+  left: 46.5%;
+  font-size: 60px;
+  cursor: pointer;
+  animation: myArrow 1s ease infinite;
+}
+
+@keyframes myArrow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.aboutMe {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background: #f1f1f1;
+  color: black;
+  height: 80vh;
+}
+.aboutMe h1 {
+  position: absolute;
+  top: 38%;
+  left: 8%;
+  font-size: 65px;
+  font-family: "Roboto", sans-serif;
+}
+.aboutMe p {
+  position: absolute;
+  top: 55%;
+  left: 5%;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 25px;
+  width: 700px;
+  height: 250px;
+}
+.me {
+  width: 200px;
+  height: 200px;
+  background: #1c1d25;
+  position: absolute;
+  top: 32%;
+  right: 10%;
+  border-radius: 50%;
+}
+.myMe {
+  position: absolute;
+  top: 38%;
+  left: 15%;
+  color: white;
+  font-size: 50px;
+  font-family: "Tourney", cursive;
+}
+.project {
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  background: white;
+  top: 100%;
+  color: #1c1d25;
+}
+.project h1 {
+  position: absolute;
+  top: 5%;
+  left: 35%;
+}
+.underLine1 {
+  position: absolute;
+  top: 20%;
+  left: 37%;
+  background: #424557;
+  width: 28%;
+  height: 5px;
+}
+.underLine2 {
+  position: absolute;
+  top: 22%;
+  left: 37%;
+  background: #424557;
+  width: 28%;
+  height: 5px;
+}
+.myCards {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-column-gap: 100px;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  width: 170px;
+  height: 13.5rem;
+  cursor: pointer;
+  transition: all 1.5s;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.frontCard1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #1c1d25;
+}
+.frontCard1 h4 {
+  position: absolute;
+  top: 5%;
+  color: white;
+  font-size: 35px;
+  left: 10%;
+  font-family: "Titillium Web", sans-serif;
+  backface-visibility: hidden;
+}
+.frontCard1 h6 {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  font-size: 22px;
+  color: #f98f36;
+  font-family: cursive;
+}
+.frontCard1 img {
+  width: 50%;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+}
+.backCard1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #f98f36;
+  transform: rotateY(180deg);
+}
+.backCard1 a {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  text-decoration: underline white;
+}
+.frontCard2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #1c1d25;
+}
+.frontCard2 h4 {
+  position: absolute;
+  top: 5%;
+  color: white;
+  font-size: 35px;
+  left: 10%;
+  font-family: "Titillium Web", sans-serif;
+  backface-visibility: hidden;
+}
+.frontCard2 h6 {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  font-size: 22px;
+  color: #f98f36;
+  font-family: cursive;
+}
+.frontCard2 img {
+  width: 50%;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+}
+.backCard2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background: #f98f36;
+}
+.backCard2 a {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  text-decoration: underline white;
+}
+.frontCard3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #1c1d25;
+}
+.frontCard3 h4 {
+  position: absolute;
+  top: 5%;
+  color: white;
+  font-size: 35px;
+  left: 10%;
+  font-family: "Titillium Web", sans-serif;
+  backface-visibility: hidden;
+}
+.frontCard3 h6 {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  font-size: 22px;
+  color: #f98f36;
+  font-family: cursive;
+}
+.frontCard3 img {
+  width: 50%;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+}
+.backCard3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #f98f36;
+  transform: rotateY(180deg);
+}
+.backCard3 a {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  text-decoration: underline white;
+}
+.frontCard4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #1c1d25;
+}
+.frontCard4 h4 {
+  position: absolute;
+  top: 5%;
+  color: white;
+  font-size: 35px;
+  left: 10%;
+  font-family: "Titillium Web", sans-serif;
+  backface-visibility: hidden;
+}
+.frontCard4 h6 {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  font-size: 22px;
+  color: #f98f36;
+  font-family: cursive;
+}
+.frontCard4 img {
+  width: 50%;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+}
+.backCard4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background: #f98f36;
+}
+.backCard4 a {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  text-decoration: underline white;
+}
+.contactMe {
+  position: absolute;
+  top: 200%;
+  width: 100%;
+  height: 60vh;
+  background: #222222;
+}
+.contactMe h1 {
+  position: absolute;
+  font-size: 50px;
+  top: 2%;
+  left: 40%;
+  color: white;
+  text-decoration: underline white;
+}
+.contactMe p {
+  position: absolute;
+  top: 23%;
+  left: 40%;
+  font-size: 30px;
+  color: #f98f36;
+  font-family: "Titillium Web", sans-serif;
+}
+.line {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 70%;
+  height: 1px;
+  background: white;
+}
+.socialMedia {
+  position: absolute;
+  top: 45%;
+  left: 39%;
+  font-size: 38px;
+  color: rgb(124, 124, 194);
+  font-family: "Titillium Web", sans-serif;
+}
+.fab {
+  color: white;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.fa-facebook {
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  font-size: 45px;
+}
+.fa-instagram {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  font-size: 45px;
+}
+.fa-twitter {
+  position: absolute;
+  top: 70%;
+  left: 75%;
+  font-size: 45px;
+}
+
+.fa-facebook:hover {
+  color: rgb(50, 125, 238);
+  transform: scale(2);
+}
+.fa-instagram:hover {
+  color: rgb(161, 74, 43);
+  transform: scale(2);
+}
+.fa-twitter:hover {
+  color: rgb(60, 180, 216);
+  transform: scale(2);
+}
+.toggle {
+  position: fixed;
+  background: black;
+  color: white;
+  z-index: 10;
+}
+.sideBar {
+  position: absolute;
+  top: -125%;
+  right: 0;
+  width: 480px;
+  height: 36.8rem;
+  color: white;
+  z-index: 1;
+  background: rgb(15, 28, 63);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+.sideBar ul li {
+  margin: 5rem;
+  list-style: none;
+  font-size: 24px;
+  font-family: "Titillium Web", sans-serif;
+  cursor: pointer;
+  margin-left: 12rem;
+}
+
+.sideBar ul li:hover {
+  color: #424557;
+}
+.sideBarToggle {
+  position: fixed;
+}
+.fa-bars {
+  position: absolute;
+  top: -122%;
+  right: 5%;
+  color: white;
+  font-size: 35px;
+  visibility: hidden;
+  cursor: pointer;
+}
+.fa-bars:hover {
+  color: rgb(196, 194, 194);
+}
+.sideBar i {
+  position: absolute;
+  top: 3%;
+  font-size: 35px;
+  left: 5%;
+  color: white;
+  cursor: pointer;
+}
+.fa-times:hover {
+  color: rgb(196, 194, 194);
+}
+@media all and (max-width: 700px) {
+  .navBar {
+    width: 480px;
+  }
+  .navBar ul {
+    display: none;
+  }
+  .fa-bars {
+    visibility: visible;
+    top: -122%;
+  }
+  .navBar p {
+    margin-left: 5%;
+  }
+  .homePage {
+    width: 480px;
+  }
+  .homePage h1 {
+    font-size: 40px;
+    left: 15%;
+  }
+  .homePage h2 {
+    font-size: 27px;
+    left: 18%;
+    top: 40%;
+  }
+  .homePage button {
+    font-size: 20px;
+    left: 33%;
+    top: 50%;
+  }
+  .fa-chevron-down {
+    top: 66%;
+    left: 45%;
+  }
+  .fa-times {
+    top: -118%;
+    right: 60%;
+  }
+  .aboutMe {
+    width: 480px;
+  }
+  .aboutMe h1 {
+    font-size: 20px;
+  }
+  .aboutMe p {
+    font-size: 15px;
+    width: 200px;
+    top: 50%;
+  }
+  .me {
+    width: 110px;
+    height: 110px;
+    top: 42%;
+  }
+  .myMe {
+    font-size: 24px;
+  }
+  .project {
+    width: 480px;
+  }
+  .underLine1 {
+    top: 10%;
+    left: 35%;
+  }
+  .underLine2 {
+    top: 12%;
+    left: 35%;
+  }
+  .myCards {
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    grid-gap: 20px;
+    top: 25%;
+    left: 23%;
+  }
+  .card {
+    width: 120px;
+    height: 8rem;
+  }
+  .frontCard1 h4 {
+    font-size: 20px;
+    left: 20%;
+  }
+  .frontCard1 h6 {
+    font-size: 15px;
+    left: 22%;
+  }
+  .backCard1 a {
+    font-size: 14px;
+  }
+  .frontCard2 h4 {
+    font-size: 20px;
+    left: 20%;
+  }
+  .frontCard2 h6 {
+    font-size: 15px;
+    left: 22%;
+  }
+  .backCard2 a {
+    font-size: 14px;
+  }
+  .frontCard3 h4 {
+    font-size: 20px;
+    left: 20%;
+  }
+  .frontCard3 h6 {
+    font-size: 15px;
+    left: 22%;
+  }
+  .backCard3 a {
+    font-size: 14px;
+  }
+  .frontCard4 h4 {
+    font-size: 20px;
+    left: 20%;
+  }
+  .frontCard4 h6 {
+    font-size: 15px;
+    left: 22%;
+  }
+  .backCard4 a {
+    font-size: 14px;
+  }
+  .contactMe {
+    width: 480px;
+  }
+  .contactMe p {
+    top: 15%;
+    left: 38%;
+  }
+  .line {
+    top: 33%;
+    left: 15%;
+  }
+  .contactMe h2 {
+    top: 38%;
+    font-size: 25px;
+    left: 35%;
+  }
+  .fa-facebook,
+  .fa-instagram,
+  .fa-twitter {
+    font-size: 30px;
+  }
+}
